@@ -31,12 +31,18 @@
   }
 
   .content {
+    flex: 1;
     display: flex;
     justify-content: space-around;
-    width: 100%;
-    max-width: 700px;
     margin-bottom: 3rem;
   }
+
+
+app-side-nav {
+  width: 20px; /* Adjust width as needed */
+  background-color: #f0f0f0; /* Background color for visibility */
+  padding: 20px; /* Padding for spacing inside the nav */
+}
 
 
   @media screen and (max-width: 650px) {

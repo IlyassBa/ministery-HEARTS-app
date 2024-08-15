@@ -1,0 +1,47 @@
+<h1 mat-dialog-title>Edit Patient</h1>
+<div mat-dialog-content>
+  <form (ngSubmit)="updatePatient()">
+    <mat-form-field appearance="fill">
+        <mat-label>CNIE</mat-label>
+      <input matInput [(ngModel)]="currentPatient.CNIE" name="CNIE" placeholder="CNIE">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Nom</mat-label>
+      <input matInput [(ngModel)]="currentPatient.nom" name="nom" placeholder="Nom">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Prenom</mat-label>
+      <input matInput [(ngModel)]="currentPatient.prenom" name="prenom" placeholder="Prenom">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Date Naissance</mat-label>
+      <input matInput [(ngModel)]="currentPatient.Date_Naissance" name="Date_Naissance" placeholder="Date Naissance">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Sexe</mat-label>
+        <mat-select [(ngModel)]="currentPatient.sexe" name="sexe">
+          <mat-option value="M">M</mat-option>
+          <mat-option value="F">F</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Provenance</mat-label>
+      <input matInput [(ngModel)]="currentPatient.provenance" name="provenance" placeholder="Prenom">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Niveau De Scolarite</mat-label>
+      <input matInput [(ngModel)]="currentPatient.niveauDeScolarite" name="niveauDeScolarite" placeholder="Niveau De Scolarite">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Couverture</mat-label>
+      <input matInput [(ngModel)]="currentPatient.couverture" name="couverture" placeholder="Couverture">
+    </mat-form-field>
+    <div mat-dialog-actions>
+      <button mat-button (click)="onCancel()">Cancel</button>
+      <button mat-button color="primary" type="submit">Update</button>
+    </div>
+  </form>
+</div>
